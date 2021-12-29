@@ -16,6 +16,9 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
 
+      - name: Nuget restore
+        run: dotnet restore
+
       - name: Build app for release
         run:  msbuild D:\a\Globalmantics\Globalmantics\EF6.sln -t:rebuild -verbosity:diag -property:Configuration=Release
 
@@ -39,5 +42,5 @@ jobs:
         with:
           name: NUnit Tests
           path: reports/jest-*.xml    # Path to test results
-          reporter: jest-junit
+          reporter: dotnet-trx
   
