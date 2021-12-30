@@ -11,6 +11,13 @@ jobs:
     - uses: dorny/test-reporter@v1
       with:
         artifact: test-results            # artifact name
-        name: JEST Tests                  # Name of the check run which will be created
+        name: Unit Tests                  # Name of the check run which will be created
         path: 'test-result.trx'           # Path to test results (inside artifact .zip)
-        reporter: dotnet-trx              # Format of test results
+        reporter: dotnet-trx      
+
+    - uses: dorny/test-reporter@v1
+      with:
+        artifact: integration-test-results            # artifact name
+        name: Integration Tests                  # Name of the check run which will be created
+        path: 'integration-test-results.trx'           # Path to test results (inside artifact .zip)
+        reporter: dotnet-trx             
