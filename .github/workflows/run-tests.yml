@@ -41,6 +41,6 @@ jobs:
         if: success() || failure()
         with:
           name: NUnit Tests
-          path: reports/jest-*.xml    # Path to test results
+          path: D:\a\Globalmantics\Globalmantics\Tests\Globalmantics.UnitTests\TestResults\*.trx    # Path to test results
           reporter: dotnet-trx
   
