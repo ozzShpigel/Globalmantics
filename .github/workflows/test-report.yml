@@ -19,5 +19,5 @@ jobs:
       with:
         artifact: integration-test-results            # artifact name
         name: Integration Tests                  # Name of the check run which will be created
-        path: 'integration-test-results.trx'           # Path to test results (inside artifact .zip)
+        path: 'test-results.trx'           # Path to test results (inside artifact .zip)
         reporter: dotnet-trx             
