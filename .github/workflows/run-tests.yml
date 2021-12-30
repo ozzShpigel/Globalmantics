@@ -44,5 +44,5 @@ jobs:
         uses: actions/upload-artifact@v2
         if: success() || failure()
         with:
-          name: test-results
+          name: integration-test-results
           path: 'D:\a\Globalmantics\Globalmantics\Tests\Globalmantics.IntegrationTests\TestResults\*.trx'    
