@@ -26,7 +26,7 @@ namespace Globalmantics.UnitTests
             var cart = cartService.GetCartForUser(user);
             context.Commit();
 
-            cart.CartItems.Count().Should().Be(0);
+            cart.CartItems.Count().Should().Be(1);
         }
 
         [Test]
