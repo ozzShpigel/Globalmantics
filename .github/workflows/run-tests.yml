@@ -17,7 +17,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
 
       - name: Nuget restore
-        run: dotnet restore
+        run: Nuget restore
 
       - name: Build app for release
         run:  msbuild D:\a\Globalmantics\Globalmantics\EF6.sln -t:rebuild -verbosity:diag -property:Configuration=Release
