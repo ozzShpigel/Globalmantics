@@ -28,21 +28,21 @@ jobs:
           install: localdb
 
       - name: Run Unit Tests
-        run: dotnet test D:\a\Globalmantics\Globalmantics\Tests\Globalmantics.UnitTests\Globalmantics.UnitTests.csproj --logger "trx;LogFileName=test-result.trx"
+        run: dotnet test .\Tests\Globalmantics.UnitTests\Globalmantics.UnitTests.csproj --logger "trx;LogFileName=test-result.trx"
 
       - name: Run Integration Tests
-        run: dotnet test D:\a\Globalmantics\Globalmantics\Tests\Globalmantics.IntegrationTests\Globalmantics.IntegrationTests.csproj --logger "trx;LogFileName=test-result.trx"
+        run: dotnet test .\Tests\Globalmantics.IntegrationTests\Globalmantics.IntegrationTests.csproj --logger "trx;LogFileName=test-result.trx"
       
       - name: Unit Test Report
         uses: actions/upload-artifact@v2
         if: success() || failure()
         with:
           name: test-results
-          path: 'D:\a\Globalmantics\Globalmantics\Tests\Globalmantics.UnitTests\TestResults\*.trx'
+          path: '.\Tests\Globalmantics.UnitTests\TestResults\*.trx'
 
       - name: Integration Test Report
         uses: actions/upload-artifact@v2
         if: success() || failure()
         with:
           name: integration-test-results
-          path: 'D:\a\Globalmantics\Globalmantics\Tests\Globalmantics.IntegrationTests\TestResults\*.trx'    
+          path: '.\Tests\Globalmantics.IntegrationTests\TestResults\*.trx'    
