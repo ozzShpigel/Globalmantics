@@ -7,7 +7,7 @@ namespace Globalmantics.IntegrationTests
     {
         protected CartSeviceContext()
         {
-            CartService = new CartService(Repository);
+            CartService = new CartService(Repository, new MockLog());
         }
 
         public CartService CartService { get; }

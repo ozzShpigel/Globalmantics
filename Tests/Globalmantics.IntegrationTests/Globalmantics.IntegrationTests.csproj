@@ -109,6 +109,7 @@
     <Compile Include="CartSeviceContext.cs" />
     <Compile Include="CartSeviceTests.cs" />
     <Compile Include="IsolatedAttribute.cs" />
+    <Compile Include="MockLog.cs" />
     <Compile Include="TestContext.cs" />
     <Compile Include="TestSetup.cs" />
     <Compile Include="UserServiceContext.cs" />

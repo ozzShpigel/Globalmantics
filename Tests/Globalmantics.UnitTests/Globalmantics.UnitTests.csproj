@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="CartServiceTests.cs" />
     <Compile Include="CartTests.cs" />
+    <Compile Include="MockLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserServiceTests.cs" />
   </ItemGroup>
