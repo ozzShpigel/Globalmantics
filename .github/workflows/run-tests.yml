@@ -20,7 +20,7 @@ jobs:
         run: Nuget restore
 
       - name: Build app for release
-        run:  msbuild .\Globalmantics\EF6.sln -t:rebuild -verbosity:diag -property:Configuration=Release
+        run:  msbuild .\EF6.sln -t:rebuild -verbosity:diag -property:Configuration=Release
         
       - name: Install localdb
         uses: potatoqualitee/mssqlsuite@v1
