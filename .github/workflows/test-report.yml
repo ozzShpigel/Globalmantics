@@ -1,7 +1,7 @@
 name: 'Test Report'
 on:
   workflow_run:
-    workflows: ['CI']                     # runs after CI workflow
+    workflows: ['CI']                     
     types:
       - completed
 jobs:
@@ -10,14 +10,14 @@ jobs:
     steps:
     - uses: dorny/test-reporter@v1
       with:
-        artifact: test-results            # artifact name
-        name: Unit Tests                  # Name of the check run which will be created
-        path: 'test-result.trx'           # Path to test results (inside artifact .zip)
+        artifact: test-results            
+        name: Unit Tests                  
+        path: 'test-result.trx'          
         reporter: dotnet-trx      
 
     - uses: dorny/test-reporter@v1
       with:
-        artifact: integration-test-results            # artifact name
-        name: Integration Tests                  # Name of the check run which will be created
-        path: 'test-result.trx'           # Path to test results (inside artifact .zip)
+        artifact: integration-test-results            
+        name: Integration Tests                 
+        path: 'test-result.trx'          
         reporter: dotnet-trx             
