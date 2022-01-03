@@ -45,23 +45,4 @@ jobs:
         if: success() || failure()
         with:
           name: integration-test-results
-          path: '.\Tests\Globalmantics.IntegrationTests\TestResults\*.trx'    
-
-  report:
-    needs: [build]
-    if: success() || failure()
-    runs-on: ubuntu-latest
-    steps:
-    - uses: dorny/test-reporter@v1
-      with:
-        artifact: test-results            
-        name: Unit Tests                  
-        path: 'test-result.trx'          
-        reporter: dotnet-trx      
-
-    - uses: dorny/test-reporter@v1
-      with:
-        artifact: integration-test-results            
-        name: Integration Tests                 
-        path: 'test-result.trx'          
-        reporter: dotnet-trx
+          path: '.\Tests\Globalmantics.IntegrationTests\TestResults\*.trx'
